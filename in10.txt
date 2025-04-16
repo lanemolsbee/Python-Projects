@@ -1,4 +1,12 @@
-I Jul 8 1951 : 		Paris celebrates 2000th birthday
-I 7/8/1951 :   Paris has its 2000th birthday
-I 1951-07-08 : Holy crap, Paris is old!
-R    7/8/1951
+# no two conferences the same
+A (Z)	4	19
+B (Y)	6	11
+C (X)	13	31
+D (W)	3	42
+E (V)	21	15
+F (U)	32	17
+G (T)	2	28
+H (S)	19	34
+I (R)	11	28
+J (Q)	30	11
+K (P)	22	16

@@ -1,2 +1,2 @@
-I 2017-01-01 : New Year's Day
-R 2017-01-01
+1	UConn (AAC)	40	0
+5	Louisville (AAC)	33	5

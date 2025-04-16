@@ -4,11 +4,47 @@ class LinkedList:
     
     # sort the nodes in the list
     def sort(self):
-        #your code goes here
-    
-    
+        '''
+        This function sorts the LinkedList object
+        in descendingg order. 
+        Parameters: None
+        Returns: the sorted LinkedList
+        '''
+        sorted = LinkedList()
+        if self._head == None:
+            return None
+        
+        
+         
+        while self._head != None:            
+            # Removes a node to be placed
+            curr_element = self.remove()        
+            
+            if sorted._head == None:
+                sorted._head = curr_element
+            # Add a node to the head if the new node is greater
+            elif sorted._head.value() < curr_element.value():
+                sorted.add(curr_element)
+            else:
+                # Find the first node less than curr_element
+                E1 = sorted._head
+                while E1 != None:
+                    if E1.value() < curr_element.value():
+                        break
+                    E1 = E1._next
+                # Determine where to place the node
+                E = sorted._head
+                while E._next is not E1:
+                    E = E._next
+                
+                sorted.insert(E, curr_element)
+            
+        self._head = sorted._head
+        return self._head
+
+
     # add a node to the head of the list
-     def add(self, node):
+    def add(self, node):
         node._next = self._head
         self._head = node
         
@@ -34,12 +70,6 @@ class LinkedList:
             curr_node = curr_node.next()
         string += ']'
         return string
-    
-    def sort(self):
-        sorted = LinkedList()
-        
-
-
 
 class Node:
     def __init__(self, value):
@@ -54,3 +84,27 @@ class Node:
     
     def next(self):
         return self._next
+
+def main():
+    '''
+    This is the main function, which tests the 
+    sort function. 
+    Parameters: None
+    Returns: nothing
+    '''
+    file_name = input()
+    file = open(file_name, 'r')
+    numbers = []
+    to_be_sorted = LinkedList()
+    for line in file:
+        numbers = line.split()
+    for n in numbers:
+        # Cast the value to an integer
+        node = Node(int(n))
+        to_be_sorted.add(node)
+    to_be_sorted.sort()
+    print(to_be_sorted)
+
+main()    
+
+
