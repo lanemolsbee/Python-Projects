@@ -1,0 +1,28 @@
+# Test One (Normal)
+# This tests that the program successfully
+determines hits, misses, second hits and misses 
+on the same spot, and prints the appropriate output.
+# End of test
+
+# Test Two (Normal)
+# This tests that the program
+is able to successfully determine whether
+all the ships have been sunk.
+# End of test
+
+# Test Three (Error)
+# This tests whether the program can handle
+a number of values per line in  the guess file
+that is not equal to 2, so if there were zero values,
+1 value, or more than 2 values.
+# End of test
+
+# Test Four (Error)
+# The values in the placement file include
+non-numerical values for the coordinates.
+# End of test
+
+# Test Five (Error)
+# This tests whether the program can handle
+an empty file. 
+# End of Test
